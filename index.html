@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #d12030;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #ffffff;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: gray;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: gray;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+/* Container holding the image and the text */
+.container {
+  position: relative;
+ <!-- text-align: center; -->
+  color: white;
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+hr{
+  color:white;
+}
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  <a href="" style="background-color:white;color:#d12030">Home</a><hr>
+  <a href="products.html">Products</a><hr>
+  <a href="search.html">Search</a><hr>
+  <a href="elinks.html">E-Links</a><hr>
+  <a href="contact.html">Contact Us</a><hr>
+  <a href="feedback.html">Feedback</a><hr>
+  <button class="dropdown-btn">Login 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="adminlogin.html">Admin Login</a><hr>
+    <a href="stafflogin.html">Staff Login</a><hr>
+    <a href="customerlogin.html">Customer Login</a>
+  </div>
+  
+</div>
+
+<div class="main">
+  <!--<h2>Muscat Sports</h2>
+  <p>Click on the dropdown button to open the dropdown menu inside the side navigation.</p>
+  <p>This sidebar is of full height (100%) and always shown.</p>
+  <p>Some random text..</p>
+  <img src="images/main.jpg"/>
+ -->
+ <div class="container">
+  <img src="images/main.jpg" alt="Snow" style="width:100%;">
+  <div style="color:black">
+  <h2>Home</h2>
+  <p>Thousands of people go in for sports, because sports help us to keep in good health. The most popular sports in our country are field-and-track athletics, football, volleyball, basketball, ice hockey, gymnastics, skiing, and skating. There are lots of stadiums, sport clubs, and sport grounds in our country. If you want to keep fit, you must take up one kind of sport or another.
+  </p>
+  <p>Sport is an essential part of my daily life. Every morning all the year round I do morning exercises. Almost every day I do some training. In summer I go swimming and rowing. Usually I spend my winter holidays in the country where I ski, skate or toboggan.
+</p>
+<p>
+Nearly all students of our Uni spend much time going in for sport. First of all we have our physical training lessons. From time to time, competitions are organized between faculties in football, volleyball, basketball or chess.
+</p>
+<p>
+Russian people have always paid much attention to sport. Sport keeps people fit and healthy and makes them better disciplined in their daily activities.
+</p>
+<p>
+Numerous kinds of sports, both winter and summer, are popular in the Russian Federation. Millions of citizens of Russia engage in some sporting activities and even in competitions. Physical Training is a subject on the curriculum of schools and universities. You can hardly find a school or a college without sports grounds. Sports facilities are available at any university or other higher educational establishments.
+</p>
+<p>
+Sports in this country have traditionally been divided into amateur and professional. The core of professional sports are sporting societies. Millions, from beginners to champions, are members of sporting clubs and societies. There is a number of national sports societies like the Spartak or the Dynamo which have their local brunch clubs throughout the country. Youngsters from the age of 7 to 18 are trained in sports schools which are run by the major sports clubs. The schools cover a wide range of sports, from track-and-field and calisthenics to boxing.
+</p>
+<p>
+Since their debut at the Helsinki Olympic Games, Russia has been a participant of all the Olympiads. Russian sportsmen and sportswomen have collected numerous gold, silver and bronze medals. Numerous Olympic and world records have been broken and are still held.
+</p>
+<p>
+There are sports clubs at many enterprises and offices. Many of them are fee-paying, but the membership fee is moderate. At these and other amateur clubs and fitness and shaping centers people go in for aerobics, yoga, body-building, swimming, skating, table and lawn tennis, chess, jogging, and winter swimming. Participation in sports in this country is massive by any standards.
+  </p>
+  </div>
+</div>
+ </div>
+
+<script>
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+</script>
+
+</body>
+</html> 

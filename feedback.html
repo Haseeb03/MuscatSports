@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #d12030;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #ffffff;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: gray;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: gray;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+/* Container holding the image and the text */
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #d12030;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: white;
+  color:#d12030;
+}
+hr{
+  color:white;
+}
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  <a href="index.html">Home</a><hr>
+  <a href="products.html">Products</a><hr>
+  <a href="search.html">Search</a><hr>
+  <a href="elinks.html">E-Links</a><hr>
+  <a href="contact.html">Contact Us</a><hr>
+  <a href="feedback.html" style="background-color:white;color:#d12030">Feedback</a><hr>
+  <button class="dropdown-btn">Login 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="adminlogin.html">Admin Login</a><hr>
+    <a href="stafflogin.html">Staff Login</a><hr>
+    <a href="customerlogin.html">Customer Login</a>
+  </div>
+  
+</div>
+
+<div class="main">
+  <!--<h2>Muscat Sports</h2>
+  <p>Click on the dropdown button to open the dropdown menu inside the side navigation.</p>
+  <p>This sidebar is of full height (100%) and always shown.</p>
+  <p>Some random text..</p>
+  <img src="images/main.jpg"/>
+ -->
+ <div class="container">
+  <img src="images/main.jpg" alt="Snow" style="width:100%;">
+  
+</div>
+<h2>Feedback</h2>
+<p><b>Overall, how did you feel about the services you received?</b></p>
+    
+    
+  <input type="radio" id="VerySatisfied" name="feedback" value="Very Satisfied">
+  <label for="male">Very Satisfied</label><br>
+  <input type="radio" id="Satisfied" name="feedback" value="Satisfied">
+  <label for="female">Satisfied</label><br>
+  <input type="radio" id="NietherSatisfiedOrDissatisfied" name="feedback" value="other">
+  <label for="other">Niether Satisfied or Dissatisfied</label><br>
+  <input type="radio" id="Dissatisfied" name="feedback" value="Dissatisfied">
+  <label for="Dissatisfied">Dissatisfied</label><br>
+  <input type="radio" id="VeryDissatisfied" name="feedback" value="Very dissatisfied">
+  <label for="female">Very Dissatisfied</label><br>
+  
+  
+  
+    <p><b>How could we improve this service?</b></p>
+    <textarea placeholder="Write something.." style="height:150px; width:100%"></textarea>
+    <input type="submit" value="Send Feedback">
+ </div>
+
+<script>
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+</script>
+
+</body>
+</html> 
